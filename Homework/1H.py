@@ -5,7 +5,7 @@
 123 -> 6 (1 + 2 + 3)
 100 -> 1 (1 + 0 + 0) |
 
-// Solution:
+// Solution1:
 number = int(input('Input total number: '))
 
 firstNumber = number // 100
@@ -16,8 +16,12 @@ print(f'First number is { secondNumber }')
 print(f'First number is { thirdNumber }')
 
 totalSum = firstNumber + secondNumber + thirdNumber
-
 print(f'Sum of all numbers is { totalSum }')
+
+// Solution2:
+number = input('Input your 3 digits number: ')
+sumOfNumbers = int(number[0]) + int(number[1]) + int(number[2])
+print(f'Sum of numbers in {number} is {sumOfNumbers}')
 
 Задача 4: Петя, Катя и Сережа делают из бумаги журавликов. Вместе они сделали S журавликов. 
 Сколько журавликов сделал каждый ребенок, если известно, что Петя и Сережа сделали одинаковое количество журавликов, 
@@ -45,10 +49,12 @@ print(f'Sergey made {seregaPeaces} peaces')
 385916 -> yes
 123456 -> no
 
-// Solution
+// Solution1:
 number = int(input('Input 6-digit number: '))
 leftPart = str(number)[:3]
-rightPart = str(number)[3:6]
+rightPart = str(number)[-3:]
+print(leftPart)
+print(rightPart)
 
 leftOne = int(leftPart[0])
 leftTwo = int(leftPart[1])
@@ -70,8 +76,8 @@ print(f'The ticket you bought is {result}')
 
 3 2 4 -> yes
 3 2 1 -> no
-"""
 
+// Solution1:
 width = int(input('Input width side qty: '))
 height = int(input('Input height side qty: '))
 check = int(input('Input size you need: '))
@@ -79,3 +85,4 @@ square = width * height
 
 result = 'You can' if width * height > square and  ((check % width == 0)) or ((check % height == 0)) else 'You can not'
 print(f'{result} get this piece of chocolate')
+"""
