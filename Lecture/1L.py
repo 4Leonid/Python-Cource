@@ -1,78 +1,106 @@
 """
+print(5, 8, 6)
+
+//Types
 n = 5
 print(n)
 print(type(n))
-
 n = None
 print(n)
 print(type(n))
-
-n = 'fdd'
+n = 1.89
+print(n)
+print(type(n))
+n = 'Hello, world'
 print(n)
 print(type(n))
 
-n = 'fd\'dfdf'
-print(n)
+//Quotation
+quotation = 'Hello \' world'
+print(quotation)
 
+quotation = 'Hello "what to do" world'
+print(quotation)
 
-a = 4
+Hiding lines
+#print(5)
+
+// How to input different types
+a = 10
 b = 4.44
-c = 'hello'
-print(a, b, c)
-print(a, '-' , b, '-', c)
-print(f"{a} - {b} - {c}")
+c = 'Hello'
+
+print(a, '-', b, '-', c)
+print(f'{a} - {b} - {c}')
 print("{} - {} - {}".format(a, b, c))
 
-// 
-print('Input first number: ')
+print('Input first line: ')
 a = input()
-print(a)
-
 b = input('Input second number: ')
 
 print(a, '+', b, '=', a + b)
 
-print('Input first number: ')
-a = int(input())
+c = 5.89
+print(c)
+print(type(c))
 
+b = int(c)
+print(b)
+print(type(b))
+
+b = str(c)
+print(b + "36")
+print(type(b))
+
+c = bool(c)
+print(c)
+print(type(c))
+
+print('Input first line: ')
+a = int(input())
 b = int(input('Input second number: '))
 
 print(a, '+', b, '=', a + b)
 
-
-c = 5.89
-print(c)
-print(type(c))
-c = str(c)
-print(c + '89')
-print(type(c))
-
 // Rounding
-a = 5.8989
-b = 6.5544
+a = 5.58578
+b = 6.54768
+print(a * b)
 print(round(a * b, 3))
 
-// elif
-username = input('Input name: ')
-if username == 'Masha':
-    print('Yes, it is Masha')
-elif username == 'Marina':
-    print('I waited for you, Marina')
-elif username == 'Ilnar':
-    print('Ilnar is top)')
+//Interpolation
+user = input('Input name: ')
+if user == 'Masha':
+    print('Yes, its Mashs')
+elif user == 'Marina':
+    print('I waited for you so long')
+elif user == 'Ilnar':
+    print('Its top')
 else:
-    print('Hello, ', username)
+    print('Hello,',user,', I dont know you')  
 
-// Cycle
-i = 0
-while i < 5:
-    i += 1
+// While
+number = 423
+sum = 0
+while number > 0:
+    x = number % 10
+    print(x)
+    sum += x
+    number //= 10
+print(sum)
+
+// While condition
+index = 0
+while index < 5:
+    #if index == 3:
+    #    break
+    index += 1
 else:
-    print('Please')
+    print('Plese')
     print('Stop')
-print(i)
+print(index) 
 
-// flag
+// Flag using
 n = int(input())
 flag = True
 i = 2
@@ -85,40 +113,43 @@ while flag:
         flag = False
     i += 1
 
-// for cycle
-a = 'qwerty'
-for i in a :
+// Range and (for in)
+r = range(5) # 012345
+r = range(2, 5) # 234
+r = range(0, -5) # ---
+r = range(1, 10, 2) # 13579
+r = range(100, 0, -20) # 100 80 60 40 20
+for i in r:
+    print(i)
+for i in range(100, 0, -20):
     print(i)
 
-// range
-line = ''
 for i in range(5):
-    line = ''
+    line = ""
     for j in range(5):
-        line += '*'
+        line += "*"
     print(line)
 
-// Text manager
-text = 'Eat more these soft french bread'
+// Using range in text
+text = 'Съешь еще этих Мягких французских булок'
 print(len(text))
+print('еще' in text)
 print(text.lower())
 print(text.upper())
-print(text.replace('more', 'MORE'))
-
-
-text = 'съешь ещё этих мягких французских булок'
-print(text[0]) # c
-print(text[1]) # ъ
-print(text[len(text)-1]) # к
-print(text[-5]) # б
-print(text[:]) # съешь ещё этих мягких французских булок 
-print(text[:2]) # съ
-print(text[len(text)-2:]) # ок
-print(text[2:9]) # ешь ещё
-print(text[6:-18]) # ещё этих мягких 
-print(text[0:len(text):6]) # сеикакл
-print(text[::6]) # сеикакл
-   
-text = text[2:9] + text[-5] + text[:2]
-print(text)
+print(text.replace('еще', 'EЩЕ'))
+print(text[0]) #С
+print(text[1]) #ъ
+print(text[len(text) -1]) #к
+print(text[-1]) #к
+print(text[-5]) #б
+print(text[:]) # Съешь еще этих Мягких французских булок
+print(text[:2]) # Съ
+print(text[len(text) - 2:]) # ок
+print(text[20:]) # х французских булок
+print(text[2:9]) # ешь еще
+print(text[6:-18]) # еще этих Мягких
+print(text[0:len(text):6]) # Сеикакл
+print(text[::6]) # Сеикакл
+text = text[2:9] + text[-5] + text[:2] 
+print(text) # ешь ещебСъ
 """
