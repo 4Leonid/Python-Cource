@@ -3,7 +3,15 @@
 Выдать без повторений в порядке возрастания все те числа, которые встречаются в обоих наборах.
 Пользователь вводит 2 числа. n — кол-во элементов первого множества. m — кол-во элементов второго множества. 
 Затем пользователь вводит сами элементы множеств.
-"""
+
+// Лилия решение
+
+a, b = input().split()
+mn1 = set(input().split())
+mn2 = set(input().split())
+print(mn1 & mn2)
+# print(mn1.intersection(mn2))
+
 mol = [int(x) for x in input().split()]
 n = mol[0]
 m = mol[1]
@@ -24,7 +32,7 @@ kool = list(lok)
 kool.sort()
 for i in kool:
     print(i, end = '')
-
+"""
 """
 Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. 
 Она растёт на круглой грядке, причём кусты высажены только по окружности. 
@@ -38,7 +46,24 @@ for i in kool:
 Напишите программу для нахождения максимального числа ягод, 
 которое может собрать за один заход собирающий модуль, 
 находясь перед некоторым кустом заданной во входном файле грядки.
-"""
+
+num = int(input('Введите кол-во кустов: '))
+
+num_berries = [randint(1, 10) for _ in range(num)]
+print(num_berries)
+
+num_berries_left = num_berries[1:]
+num_berries_left.extend(num_berries[:1])
+print(num_berries_left)
+
+num_berries_right = num_berries[-1:]
+num_berries_right.extend(num_berries[:-1])
+print(num_berries_right)
+
+max_berries = max([num_berries[i] + num_berries_left[i] + num_berries_right[i] for i in range(len(num_berries))])
+
+print('Макс-ое кол-во ягод за один заход равно: ', max_berries)
+
 n = int(input())
 arr = list()
 for i in range(n):
@@ -50,3 +75,11 @@ for i in range(len(arr) - 1):
     arr_count.append(arr[i -1] + arr[i] + arr[i + 1])
 arr_count.append(arr[-2] + arr[-1] + arr[0])
 print(max(arr_count))
+"""
+
+print(5 % 5)
+lst = [1, 2, 3, 4, 5]
+n = len(lst)
+result = max([lst[i - 1] + lst[i] + lst[(i + 1) % n] for i in range(n)])
+
+print('\nМаксимальное число ягод, которое может собрать за один заход собирающий модуль:',result)
